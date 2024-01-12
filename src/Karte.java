@@ -68,49 +68,6 @@ int Alter;
     public int getAlter() {
         return Alter;
     }
-
-    //Hier wird der Wert der Karte von Spieler 1 mit dem Wert der Karte von Spieler 2 verglichen
- public int compareTo(Karte karte,String Attribut){  //wird nicht mehr benutzt, da vergleich in Spiel durchgeführt wird
-    switch (Attribut) {
-
-        case "p", "P":
-            if (this.PS > karte.PS) {
-                return 1;
-            }
-            if (this.PS < karte.PS) {
-                return -1;
-            }
-            return 0;
-        case "g", "G":
-            if (this.Gewicht > karte.Gewicht) {
-                return -1;
-            }
-            if (this.Gewicht < karte.Gewicht) {
-                return 1;
-            }
-            return 0;
-        case "b", "B":
-            if (this.Alter > karte.Alter) {
-                return 1;
-            }
-            if (this.Alter < karte.Alter) {
-                return -1;
-            }
-            return 0;
-        case "l", "L":
-            if (this.Laenge > karte.Laenge) {
-                return 1;
-            }
-            if (this.Laenge < karte.Laenge) {
-                return -1;
-            }
-            return 0;
-        default:
-            System.out.println("Falsche Eingabe.");
-            System.out.println("Bitte wähle 'p' für PS, 'g' für Gewicht, 'b' für Baujahr und 'l' für Länge.");
-    }
-    return 0;
- }
     @Override
     public String toString(){
      String exit;
